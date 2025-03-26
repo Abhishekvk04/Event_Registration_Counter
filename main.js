@@ -3,7 +3,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 require('dotenv').config();
 
 class MongoDBWebSocketServer {
-    constructor(port = 8080) {
+    constructor(port = process.env.PORT || 8080) {
         this.port = port;
         this.mongoClient = null;
         this.db = null;
